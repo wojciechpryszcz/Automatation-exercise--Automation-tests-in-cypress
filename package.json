@@ -1,0 +1,21 @@
+{
+  "name": "nauka",
+  "version": "1.0.0",
+  "description": "Projekt do nauki Cypressa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npx cypress run",
+    "cy:open": "npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.4.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -1,0 +1,13 @@
+# Foldery z zależnościami
+node_modules/
+e2e/automationteststore
+e2e/webdriver
+# Wyniki testów i nagrania
+cypress/screenshots/
+cypress/videos/
+
+# Pliki środowiskowe (często zawierają hasła/klucze API)
+.env
+
+# Pliki systemowe
+.DS_Store
