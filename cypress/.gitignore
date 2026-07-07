@@ -5,7 +5,7 @@ e2e/webdriver
 # Wyniki testów i nagrania
 cypress/screenshots/
 cypress/videos/
-cypress/support
+
 
 
 # Pliki środowiskowe (często zawierają hasła/klucze API)
