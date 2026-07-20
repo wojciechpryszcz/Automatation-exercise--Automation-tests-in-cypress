@@ -24,6 +24,11 @@ class Register_PO {
       falseEmail: "falsetest@gmail.com",
       falsePasswod: "falsepassword",
     },
+
+    constantData: {
+      constantEmail: "constant.test@example.com",
+      constantPassword: "ConstantPassword123",
+    },
   };
 
   NavigateToUrl() {

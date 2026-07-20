@@ -1,4 +1,5 @@
 import PageSelectorRegister from "./PageSelectorRegister";
+import PageSelectorHomePage from "./PageSelectorHomePage";
 
 class PageSelectorActions {
   signup = {
@@ -24,6 +25,10 @@ class PageSelectorActions {
 
     deleteAccountButton() {
       PageSelectorRegister.afterregister.deleteAccountButton().click();
+    },
+
+    logoutButton() {
+      PageSelectorHomePage.logged.logoutButton().click();
     },
   };
 }
