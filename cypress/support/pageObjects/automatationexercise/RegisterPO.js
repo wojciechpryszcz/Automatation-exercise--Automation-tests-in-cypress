@@ -26,6 +26,7 @@ class Register_PO {
     },
 
     constantData: {
+      constantName: "Wojtas",
       constantEmail: "constant.test@example.com",
       constantPassword: "ConstantPassword123",
     },

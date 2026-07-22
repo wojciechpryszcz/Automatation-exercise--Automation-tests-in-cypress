@@ -9,6 +9,8 @@ class PageSelectorRegister {
     passwordInput: () => cy.get('[data-qa="login-password"]'),
     h2LoginToYourAccount: () =>
       cy.contains("h2", "Login to your account").should("be.visible"),
+    h2NewUserSignup: () =>
+      cy.contains("h2", "New User Signup").should("be.visible"),
     paragraphInfo: () => cy.get('form[action="/login"] p'),
   };
 
@@ -36,6 +38,8 @@ class PageSelectorRegister {
     deleteConfirmation: () =>
       cy.contains("b", "Account Deleted!").should("be.visible"),
     continueButton: () => cy.get("a.btn.btn-primary"),
+    pUserExist: () =>
+      cy.contains("p", "Email Address already exist!").should("be.visible"),
   };
 }
 
