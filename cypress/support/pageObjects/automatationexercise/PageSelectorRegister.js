@@ -12,6 +12,7 @@ class PageSelectorRegister {
     h2NewUserSignup: () =>
       cy.contains("h2", "New User Signup").should("be.visible"),
     paragraphInfo: () => cy.get('form[action="/login"] p'),
+    aContactUs: () => cy.get('a[href="/contact_us"]'),
   };
 
   form = {
@@ -40,6 +41,20 @@ class PageSelectorRegister {
     continueButton: () => cy.get("a.btn.btn-primary"),
     pUserExist: () =>
       cy.contains("p", "Email Address already exist!").should("be.visible"),
+  };
+
+  contactUsForm = {
+    name: () => cy.get('[data-qa="name"]'),
+    email: () => cy.get('[data-qa="email"]'),
+    subject: () => cy.get('[data-qa="subject"]'),
+    message: () => cy.get('[data-qa="message"]'),
+    uploadFile: () => cy.get('input[type="file"]'),
+    submitButton: () => cy.get('[data-qa="submit-button"]'),
+    h2GetInTouch: () => cy.contains("h2", "Get In Touch").should("be.visible"),
+    statusMessage: () =>
+      cy
+        .contains("Success! Your details have been submitted successfully.")
+        .should("be.visible"),
   };
 }
 
