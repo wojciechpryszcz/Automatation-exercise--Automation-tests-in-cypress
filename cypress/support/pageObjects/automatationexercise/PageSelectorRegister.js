@@ -55,6 +55,11 @@ class PageSelectorRegister {
       cy
         .contains("Success! Your details have been submitted successfully.")
         .should("be.visible"),
+    homeButton: () => cy.contains("a", "Home"),
+    windowAlert: () =>
+      cy.on("window:alert", (str) => {
+        return true;
+      }),
   };
 }
 

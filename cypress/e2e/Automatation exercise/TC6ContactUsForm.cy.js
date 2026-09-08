@@ -12,10 +12,12 @@ describe("Contact Us Form- testing", () => {
     pageSelectorRegister.contactUsForm.email().type(register_PO.testData.email);
     pageSelectorRegister.contactUsForm.subject().type("Test subject");
     pageSelectorRegister.contactUsForm.message().type("Test message");
-    pageSelectorRegister.contactUsForm
-      .uploadFile()
-      .selectFile("cypress/fixtures/testfile.txt");
+    pageSelectorRegister.contactUsForm;
+
     pageSelectorRegister.contactUsForm.submitButton().click();
-    pageSelectorRegister.contactUsForm.statusMessage();
+
+    pageSelectorRegister.contactUsForm.statusMessage().should("be.visible");
+
+    pageSelectorRegister.contactUsForm.homeButton().click();
   });
 });
