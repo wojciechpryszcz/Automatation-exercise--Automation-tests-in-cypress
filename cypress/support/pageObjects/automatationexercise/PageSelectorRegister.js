@@ -1,4 +1,8 @@
 class PageSelectorRegister {
+  navbar = {
+    testCases: () => cy.get('a[href="/test_cases"]'),
+    testCasesURL: () => cy.url().should("include", "/test_cases"),
+  };
   signup = {
     name: () => cy.get('[data-qa="signup-name"]'),
     email: () => cy.get('[data-qa="signup-email"]'),

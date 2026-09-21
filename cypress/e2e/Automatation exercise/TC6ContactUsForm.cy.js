@@ -13,7 +13,10 @@ describe("Contact Us Form- testing", () => {
     pageSelectorRegister.contactUsForm.subject().type("Test subject");
     pageSelectorRegister.contactUsForm.message().type("Test message");
     pageSelectorRegister.contactUsForm;
-
+    cy.on("window:alert", (alertText) => {
+      // Automatyczne kliknięcie OK (domyślne zachowanie)
+      expect(alertText).to.contain("Success");
+    });
     pageSelectorRegister.contactUsForm.submitButton().click();
 
     pageSelectorRegister.contactUsForm.statusMessage().should("be.visible");
