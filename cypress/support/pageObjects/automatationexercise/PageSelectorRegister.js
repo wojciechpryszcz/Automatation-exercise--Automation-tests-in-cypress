@@ -2,7 +2,10 @@ class PageSelectorRegister {
   navbar = {
     testCases: () => cy.get('a[href="/test_cases"]'),
     testCasesURL: () => cy.url().should("include", "/test_cases"),
+    products: () => cy.get('a[href="/products"]'),
+    productsURL: () => cy.url().should("include", "/products"),
   };
+
   signup = {
     name: () => cy.get('[data-qa="signup-name"]'),
     email: () => cy.get('[data-qa="signup-email"]'),
@@ -31,7 +34,6 @@ class PageSelectorRegister {
     city: () => cy.get("#city"),
     zipcode: () => cy.get("#zipcode"),
     mobileNumber: () => cy.get("#mobile_number"),
-    // itd. dodaj tutaj resztę pól
   };
 
   afterregister = {
@@ -42,9 +44,42 @@ class PageSelectorRegister {
     deleteAccountButton: () => cy.contains("a", "Delete Account").click(),
     deleteConfirmation: () =>
       cy.contains("b", "Account Deleted!").should("be.visible"),
-    continueButton: () => cy.get("a.btn.btn-primary"),
+    continueButtonBottom: () => cy.get("a.btn.btn-primary"),
     pUserExist: () =>
       cy.contains("p", "Email Address already exist!").should("be.visible"),
+  };
+
+  productsPage = {
+    h2AllProducts: () => cy.contains("h2", "All Products").should("be.visible"),
+    firstProduct: () => cy.get('a[href="/product_details/1"]'),
+  };
+
+  productDetailPage = {
+    h2ProductDetails: () =>
+      cy.get(".product-information h2").should("be.visible"),
+
+    productName: () => cy.get(".product-information h2").should("be.visible"),
+
+    productCategory: () =>
+      cy.get(".product-information").contains("Category:").should("be.visible"),
+
+    productPrice: () =>
+      cy.get(".product-information span").contains("Rs.").should("be.visible"),
+
+    productAvailability: () =>
+      cy
+        .get(".product-information")
+        .contains("Availability:")
+        .should("be.visible"),
+
+    productCondition: () =>
+      cy
+        .get(".product-information")
+        .contains("Condition:")
+        .should("be.visible"),
+
+    productBrand: () =>
+      cy.get(".product-information").contains("Brand:").should("be.visible"),
   };
 
   contactUsForm = {
